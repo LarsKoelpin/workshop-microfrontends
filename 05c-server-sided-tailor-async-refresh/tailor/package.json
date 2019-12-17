@@ -1,0 +1,22 @@
+{
+  "name": "tailor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "cross-env PORT=8080 nodemon node index.js",
+    "start:prod": "cross-env PORT=8080 node index.js",
+    "start-tailor": "cross-env PORT=80 TAILOR=true nodemon node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-env": "^5.2.0",
+    "express": "^4.17.1",
+    "html": "^1.0.0",
+    "node-tailor": "^3.9.2",
+    "nodemon": "^1.19.1"
+  }
+}

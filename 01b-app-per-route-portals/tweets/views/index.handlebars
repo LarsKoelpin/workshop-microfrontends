@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <title>Twttr</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-reboot.min.css">
+    <base href="/">
+</head>
+
+<body>
+
+<div class="container" style="padding-top: 1rem">
+    <div class="col-md-12">
+        <form method="POST" action="/">
+            <div class="card" style="padding: 1rem">
+                <h5>Tweet verfassen</h5>
+                <div class="form-group">
+                    <textarea name="tweettext" class="form-control" placeholder="What's on your mind?"></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+        {{#each tweets}}
+            <div class="row">
+                <div class="col-sm-12" style="padding-bottom: 1rem">
+                    <div class="card" style="padding: 1rem">
+                        <h5 class="card-title">{{this.tweetText}}</h5>
+                        <p class="card-text">
+                            <a data-portal="true" href="http://{{../profileHost}}/?id={{this.author}}">
+                            Von {{this.author}}
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                {{this.tweet}}
+            </div>
+        {{/each}}
+    </div>
+    <div class="col-md-12">
+        <a data-portal="true"
+           href="http://{{trendingHost}}">
+            Jetzt im Trend
+        </a>
+    </div>
+</div>
+<script type="module" src="/js/twitter.js"></script>
+</body>
+</html>

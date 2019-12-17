@@ -1,0 +1,22 @@
+version: "3"
+services:
+  queue:
+    image: eclipse-mosquitto
+    ports:
+      - "9001:9001"
+  tweets:
+    build: "./tweets"
+    ports:
+      - "4000:4000"
+  trending:
+    build: "./trending"
+    ports:
+      - "4002:4002"
+  layout:
+    build: ./layout
+    ports:
+      - "8080:8080"
+  shared:
+    build: ./shared
+    ports:
+      - "8888:8888"

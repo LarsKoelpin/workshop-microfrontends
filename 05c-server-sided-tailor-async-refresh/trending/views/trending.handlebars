@@ -1,0 +1,21 @@
+<div class="card" style="padding: 1em">
+    <div class="card-body">
+        <h2>Trending</h2>
+        {{#each trends}}
+            <div class="strong">
+                {{this}}
+            </div>
+        {{/each}}
+    </div>
+    <button class="btn btn-outline-primary" onclick="window.location.reload()">Stay fresh!</button>
+    <script>
+        var socket = new WebSocket('ws://localhost:4002/tweets');
+        console.log("Creating socket");
+        socket.addEventListener('message', ({data}) => {
+            console.log("Received message")
+            fetch('http://localhost:4002/trending', {credentials: "include"}).then(res => res.text()).then(html => {
+                document.getElementById('trending').innerHTML = html
+            })
+        });
+    </script>
+</div>

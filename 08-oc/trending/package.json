@@ -1,0 +1,17 @@
+{
+  "name": "trending",
+  "description": "",
+  "version": "1.0.0",
+  "oc": {
+    "files": {
+      "data": "server.js",
+      "template": {
+        "src": "app.js",
+        "type": "oc-template-react"
+      }
+    }
+  },
+  "devDependencies": {
+    "oc-template-react-compiler": "5.2.0"
+  }
+}

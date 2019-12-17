@@ -1,0 +1,29 @@
+{
+  "name": "tweets",
+  "description": "",
+  "version": "1.0.0",
+  "oc": {
+    "minify": true,
+    "files": {
+      "data": "server.js",
+      "static": [
+        "css"
+      ],
+      "template": {
+        "src": "view.js",
+        "type": "oc-template-es6"
+      }
+    },
+    "parameters": {
+      "user": {
+        "description": "user name",
+        "example": "@Lars",
+        "mandatory": true,
+        "type": "string"
+      }
+    }
+  },
+  "devDependencies": {
+    "oc-template-es6-compiler": "1.1.8"
+  }
+}

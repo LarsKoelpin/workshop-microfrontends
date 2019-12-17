@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <title>Twttr</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-reboot.min.css">
+    <base href="/">
+</head>
+
+<body>
+<div class="container">
+    <div class="navbar">
+        <div class="nav">
+            <a class="nav-link" href="http://{{tweetsHost}}">Tweets</a>
+            <a class="nav-link active" href="#">Trending</a>
+            <a class="nav-link" href="http://{{profileHost}}/?id={{currentUser}}">{{currentUser}}</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            {{{body}}}
+        </div>
+    </div>
+</div>
+</body>
+</html>

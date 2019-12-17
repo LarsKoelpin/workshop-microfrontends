@@ -1,0 +1,33 @@
+
+<html lang="en">
+<head>
+    <title>Twttr</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/bootstrap-reboot.css">
+    <base href="/">
+</head>
+
+<body>
+<div id="page">
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12" id="profile">
+                    <fragment async id="profileId" src="http://profile:4001/profile" fallback-src="http://localhost:8080/fallback"></fragment>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8" id="tweets">
+                    <fragment primary src="http://tweets:4000/tweets"></fragment>
+                </div>
+                <div class="col-sm-4" id="trending"> <fragment timeout="4000" id="trending" src="http://trending:4002/trending"></fragment></div>
+            </div>
+        </div>
+        <div class="right">
+
+        </div>
+    </main>
+</div>
+</body>
+</html>

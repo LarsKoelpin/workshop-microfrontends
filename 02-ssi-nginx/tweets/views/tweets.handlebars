@@ -1,0 +1,25 @@
+<form method="POST" action="/tweets">
+    <div class="card" style="padding: 1rem">
+        <h5>Tweet verfassen</h5>
+        <div class="form-group">
+            <textarea name="tweettext" class="form-control" placeholder="What's on your mind?"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+</form>
+{{#each tweets}}
+    <div class="row">
+        <div class="col-sm-12" style="padding-bottom: 1rem">
+            <div class="card" style="padding: 1rem">
+                <h5 class="card-title">{{this.tweetText}}</h5>
+                <p class="card-text">
+                    <a href="http://{{../profileHost}}/?id={{this.author}}">
+                    Von {{this.author}}
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        {{this.tweet}}
+    </div>
+{{/each}}

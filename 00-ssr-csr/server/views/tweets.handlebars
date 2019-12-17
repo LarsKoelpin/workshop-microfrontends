@@ -1,0 +1,18 @@
+<form id="tweetForm" method="post" action="/api/tweets">
+    <div>
+        <h2>Tweet verfassen</h2>
+        <div>
+            <input type="text" name="tweet" placeholder="What's on your mind?"/>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+{{#each tweets}}
+    <div class="tweet">
+        <h5>{{this.tweetText}}</h5>
+        <p>
+            <a href="#">Von {{this.author}}</a>
+        </p>
+        {{this.tweet}}
+    </div>
+{{/each}}

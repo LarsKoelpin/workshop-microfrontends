@@ -1,0 +1,22 @@
+.modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.profile {
+  position: fixed;
+  background: white;
+  border: solid 1px black;
+  width: 320px;
+  height: 320px;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  padding: 1em;
+  z-index: 100;
+}

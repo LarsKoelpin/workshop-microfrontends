@@ -1,0 +1,9 @@
+<div class="modal" (click)="close()"></div>
+<section class="profile" (click)="close()">
+    <div *ngIf="(queryParams |async) as params">
+        {{ params['id']}}
+    </div>
+    <div style="text-align: center">
+        <img src="http://localhost:4001/avatar/avatar.png" />
+    </div>
+</section>

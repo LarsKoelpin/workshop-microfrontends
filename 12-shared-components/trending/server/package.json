@@ -1,0 +1,22 @@
+{
+  "name": "trending",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env PORT=4002 node index.js",
+    "dev": "cross-env PORT=4002 MQTT=localhost nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "nodemon": "^2.0.1"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mqtt": "^3.0.0"
+  }
+}

@@ -1,0 +1,19 @@
+<div class="card" style="padding: 1em">
+    <div class="card-body">
+        <h2>Trending</h2>
+        {{#each trends}}
+            <div class="strong">
+                {{this}}
+            </div>
+        {{/each}}
+    </div>
+    <script>
+        window.addEventListener('newTweet', (e) => {
+            console.log("trending", e);
+            fetch('http://localhost:4002/trending', {credentials: "include"}).then(res => res.text()).then(html => {
+                document.getElementById('trending').innerHTML = html
+            })
+        })
+    </script>
+    <button class="btn btn-outline-primary" onclick="window.location.reload()">Stay fresh!</button>
+</div>

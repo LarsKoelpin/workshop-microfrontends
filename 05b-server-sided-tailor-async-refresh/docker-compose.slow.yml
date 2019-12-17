@@ -1,0 +1,28 @@
+version: "3"
+services:
+  queue:
+    image: eclipse-mosquitto
+    ports:
+      - "9001:9001"
+  tweets:
+    build: "./tweets"
+    ports:
+      - "4000:4000"
+  profile:
+    build: "./profile"
+    ports:
+      - "4001:4001"
+  trending:
+    build: "./trending"
+    ports:
+      - "4002:4002"
+    environment:
+      - "DELAYED_MESSAGE=true"
+  auth:
+    build: ./auth
+    ports:
+      - "4003:4003"
+  tailor:
+    build: ./tailor
+    ports:
+      - "8080:8080"

@@ -1,0 +1,31 @@
+{
+  "name": "twttr-app",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "cross-env TWEETS_SERVICE=http://localhost:4000/tweet-service.js TRENDING_SERVICE=http://localhost:4002/trending-service.js webpack-dev-server --mode=development --app=home",
+    "compile": "cross-env TWEETS_SERVICE=http://localhost:4000/tweet-service.js TRENDING_SERVICE=http://localhost:4002/trending-service.js webpack --mode=production --app=home"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^5.2.1",
+    "single-spa": "^4.4.1",
+    "svelte": "^3.8.1",
+    "systemjs": "^6.0.0",
+    "twitter-components": "file:../../shared"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "svelte-loader": "^2.13.6",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0"
+  }
+}

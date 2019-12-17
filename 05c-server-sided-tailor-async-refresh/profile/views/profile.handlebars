@@ -1,0 +1,12 @@
+<div class="card" style="padding: 1em">
+    <h3>
+        {{currentUser.name}} hat
+        <span id="tweetCount">{{currentUser.tweetCount}} </span>
+        Tweets
+    </h3>
+    <script>
+        window.addEventListener('newTweet', (e) => {
+            document.getElementById("tweetCount").innerHTML = parseInt(document.getElementById("tweetCount").innerHTML) + 1
+        })
+    </script>
+</div>

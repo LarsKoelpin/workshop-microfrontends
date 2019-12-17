@@ -1,0 +1,8 @@
+<nav>
+    <div *ngIf="profile; else loading">
+        <h3><a routerLink="/details" [queryParams]="{ id:profile.name}">{{profile.name}}</a> hat {{profile.tweetCount}} tweets</h3>
+    </div>
+    <ng-template #loading>
+        <div>....</div>
+    </ng-template>
+</nav>

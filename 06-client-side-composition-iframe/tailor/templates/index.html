@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <title>Twttr</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/bootstrap-reboot.css">
+    <base href="/">
+</head>
+
+<body>
+<div id="page">
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12" id="profile">
+                    <iframe frameborder="0" border="0" cellspacing="0" src="http://localhost:4001/profile" style="width:100%"></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8" id="tweets">
+                    <iframe frameborder="0" border="0" cellspacing="0" src="http://localhost:4000/tweets" style="width:100%; height: 100vh"></iframe>
+                </div>
+                <div class="col-sm-4" id="trending">
+                    <iframe frameborder="0" border="0" cellspacing="0" src="http://localhost:4002/trending" style="width:100%; height: 100%;"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+
+        </div>
+    </main>
+    <script>
+        window.addEventListener("message", receiveMessage, false);
+        function receiveMessage(event) {
+            console.log('[parent]' + event.data);
+            document.querySelectorAll('iframe').forEach(e => e.contentWindow.postMessage(event.data, "*"));
+        }
+
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+button {
+    color: #fff;
+    background-color: #007bff;
+    display: block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid #007bff;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+a {
+    color: #007bff;
+}
+
+form input {
+    padding: 1em;
+    width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+}
+
+#tweets {
+    flex: 2;
+}
+
+.tweet {
+    border-bottom: 1px solid #1b1e21;
+}
+
+#trending {
+    flex: 1;
+}
+
+.trends {
+    padding: 0 1em 1em 1em;
+}
+
+.strong {
+    padding: .5em;
+}
+
+#profile {
+    background: #007bff;
+    color: white;
+    padding: 2em;
+}

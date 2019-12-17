@@ -1,0 +1,13 @@
+ <script>
+        const observer = new PerformanceObserver(list => {
+            const resourceEntries = list.getEntriesByType('resource');
+            resourceEntries.forEach(entry => console.log('RESOURCE', entry.name, entry.duration));
+
+            const paintEntries = list.getEntriesByType('paint');
+            paintEntries.forEach(entry => console.log('PAINT', entry.name, entry.startTime));
+
+            const longTaskEntries = list.getEntriesByType('longtask');
+            longTaskEntries.forEach(entry => console.log('LONGTASK', entry));
+        });
+        observer.observe({entryTypes: ['paint', 'resource', 'longtask', 'measure']});
+    </script>

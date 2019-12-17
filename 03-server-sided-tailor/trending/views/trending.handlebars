@@ -1,0 +1,11 @@
+<div class="card" style="padding: 1em">
+    <div class="card-body">
+        <h2>Trending</h2>
+        {{#each trends}}
+            <div class="strong">
+                {{this}}
+            </div>
+        {{/each}}
+    </div>
+    <button class="btn btn-outline-primary" onclick="window.location.reload()">Stay fresh!</button>
+</div>

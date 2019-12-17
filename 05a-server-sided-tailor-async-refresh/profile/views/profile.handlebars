@@ -1,0 +1,15 @@
+<div class="card" style="padding: 1em">
+    <h3>
+        {{currentUser.name}} hat
+        <span>{{currentUser.tweetCount}} </span>
+        Tweets
+    </h3>
+    <script>
+        window.addEventListener('newTweet', (e) => {
+            console.log("profile", e);
+            fetch('http://localhost:4001/profile', {credentials: "include"}).then(res => res.text()).then(html => {
+                document.getElementById('profile').innerHTML = html
+            })
+        })
+    </script>
+</div>

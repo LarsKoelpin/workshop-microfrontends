@@ -1,0 +1,24 @@
+version: "3"
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - "8080:8080"
+  queue:
+    image: eclipse-mosquitto
+    ports:
+      - "9001:9001"
+  tweets:
+    build: "./tweets"
+    ports:
+      - "4000:4000"
+  profile:
+    build: "./profile"
+    environment:
+      - "NOT_REACHABLE=false"
+    ports:
+      - "4001:4001"
+  auth:
+    build: ./auth
+    ports:
+      - "4003:4003"

@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <title>Twttr</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-reboot.min.css">
+    <base href="/">
+</head>
+
+<body>
+<div id="page">
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12" id="profile">
+                    <!--#include virtual="/profile?id=${user}" -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8" id="tweets">
+                    <!--#include virtual="/tweets" -->
+                </div>
+                <div class="col-sm-4" id="trending">
+                    <!--#include virtual="/trending" -->
+                 </div>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>

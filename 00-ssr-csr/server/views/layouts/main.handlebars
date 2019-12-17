@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <title>Twttr</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <base href="/">
+</head>
+
+<body>
+<div id="page">
+    <main>
+        <div id="profile">
+            Hello, Lars - SSR!!!
+        </div>
+        <div class="container">
+            <div id="tweets">
+                {{{body}}}
+            </div>
+            <div id="trending">
+                <div class="trends">
+                    <h2>Trending</h2>
+                    {{#each trends}}
+                        <div class="strong">{{this.hashtag}}</div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="/js/twitter.js" defer async></script>
+</body>
+</html>

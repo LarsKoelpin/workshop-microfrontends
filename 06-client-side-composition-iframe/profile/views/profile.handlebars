@@ -1,0 +1,14 @@
+<div class="card" style="padding: 1em">
+    <link href="http://localhost:4001/css/bootstrap.min.css" rel="stylesheet" />
+    <h3>
+        {{currentUser.name}} hat
+        <span id="tweetCount">{{currentUser.tweetCount}} </span>
+        Tweets
+    </h3>
+    <script>
+        window.addEventListener('message', (e) => {
+            window.location.reload();
+            console.log("Recieve Event in Profile:", e)
+        });
+    </script>
+</div>
